@@ -4,4 +4,11 @@ const elvenShieldReciepe = {
     refinedMoonstone: 4,
 };
 
+const elvemGauntReciepe = {
+    ...elvenShieldReciepe,
+    leather: 1,
+    refineMoonstome:4
+}
+
 console.log(elvenShieldReciepe);
+console.log(elvemGauntReciepe);
