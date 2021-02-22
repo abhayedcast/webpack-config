@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "/Users/swati/Downloads/myguide-extension"
+		},
+		{
+			"path": "/Users/swati/Downloads/react-guideme"
+		},
+		{
+			"path": "/Users/swati/Downloads/type-script"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "webpack-project"
+	}
+}
