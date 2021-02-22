@@ -1,16 +1,6 @@
-import "./styles/index.scss";
+import { render } from "react-dom";
+import App from './components/App.jsx';
 
-const elvenShieldReciepe = {
-    leatherStrios: 2,
-    ironIgnot: 1,
-    refinedMoonstone: 4,
-};
+render( <App />, document.getElementById("root"));
 
-const elvemGauntReciepe = {
-    ...elvenShieldReciepe,
-    leather: 1,
-    refineMoonstome:4
-}
 
-console.log(elvenShieldReciepe);
-console.log(elvemGauntReciepe);
