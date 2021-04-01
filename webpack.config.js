@@ -3,6 +3,7 @@ const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 
 let mode = "development";
@@ -13,6 +14,11 @@ const plugins = [
     new MiniCssExtractPlugin(), 
     new HtmlWebpackPlugin({
         template: "./src/index.html"
+    }),
+    new CopyWebpackPlugin({
+        patterns: [
+            { from: "./src/extension-file", to: path.resolve(__dirname, "dist") },
+        ]
     })
 ]
 
@@ -28,7 +34,10 @@ if(process.env.SERVE){
 module.exports = {
     mode: mode,
     target: target,
-    entry: "./src/index.js",
+    entry: {
+        index: "./src/index.js",
+    }, 
+
     output : {
         path: path.resolve(__dirname, "dist"),
         assetModuleFilename: "images/[hash][ext][query]"
@@ -65,12 +74,12 @@ module.exports = {
     plugins: plugins,
 
     resolve : {
-        extensions: [".js", ".jsx", '.tsx', '.ts']
+        extensions: [".js", ".jsx", '.tsx', '.ts', '.json']
     },
 
     devtool: "source-map",
     devServer: {
-        contentBase: "./dist",
+        contentBase: path.join(__dirname,"dist"),
         hot: true
     }
 }

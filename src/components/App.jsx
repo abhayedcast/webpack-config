@@ -12,7 +12,7 @@ function App() {
           <section className="hero"></section> 
           <main>
               <section>
-                  <h1>Oh haxzxzxzre krishna, React chant and be happy</h1>
+              <h1>Oh Hare krishna, Hare Krishna chant and be happy</h1>
               </section>
               <img src={leapeast} alt="Leapest" width="250"/>
               <img src={taskList} alt="taskList" width="250"/>

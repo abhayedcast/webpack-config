@@ -1,0 +1,21 @@
+.gss-header {
+	margin-left: 20px;
+    font-weight: bold;
+}
+
+.gss-field {
+	margin: 10px 20px;
+}
+
+.gss-field input {
+	width: 340px;
+    height: 20px;
+    margin-top: 3px;
+}
+
+#gss-save {
+	margin: 10px 170px;
+    height: 25px;
+    width: 50px;
+    border-radius: 4px;
+}

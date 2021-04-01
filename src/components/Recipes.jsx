@@ -22,7 +22,7 @@ const Recipes = () => {
     const [reciepe, setReciepe] = useState({})
     return (
         <div>
-            <h3>Current Reciepe</h3>
+            <h3>Current Reciepe ssdsds dsds dsd</h3>
             <button onClick={() => setReciepe(elvenShieldReciepe)}>Elven Shield Reciepe</button>
             <button onClick={() => setReciepe(elvemGauntReciepe)}>Elven Gaunt Reciepe</button>
             <ul>
@@ -37,4 +37,4 @@ const Recipes = () => {
     )
 }
 
-export default Recipes
+export default Recipes;

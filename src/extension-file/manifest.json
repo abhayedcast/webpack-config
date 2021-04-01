@@ -1,0 +1,201 @@
+{
+	"author": "EdCast",
+	"manifest_version": 2,
+	"name": "EdCast MyGuide Creator",
+	"description": "EdCast MyGuide Creator",
+	"version": "2021.01.30.1",
+	"options_ui": {
+		"page": "options/options.html",
+		"open_in_tab": false
+	},
+	"content_scripts": [{
+		"matches": ["*://*/*"],
+		"css": ["content_script/dom_selector/css/style.css"],
+		"js": [
+			"common/detect_browser.js",
+			"common/lib/jquery/jquery.min.js",
+			"common/lib/jquery/jquery.visible.min.js",
+			"config.js",
+			"common/util.contentscript.js",
+			"common/util.allframes.js",
+			"common/util.tracker.js",
+			"common/util.global.js",
+			"common/logger.js",
+			"common/string_constants/player/_english.js",
+			"common/string_constants/string_constants.js",
+			"common/string_constants/player/hindi.js",
+			"common/string_constants/player/french.js",
+			"common/string_constants/player/chinese.js",
+			"common/string_constants/player/dutch.js",
+			"common/string_constants/player/german.js",
+			"common/string_constants/player/italian.js",
+			"common/string_constants/player/japanese.js",
+			"common/string_constants/player/korean.js",
+			"common/string_constants/player/polski.js",
+			"common/string_constants/player/portuguese.js",
+			"common/string_constants/player/russian.js",
+			"common/string_constants/player/spanish.js",
+			"common/string_constants/player/turkish.js",
+			"common/features.js",
+
+			"common/models/api.js",
+			"common/models/organization.js",
+			"common/models/step.js",
+			"common/models/application.js",
+			"common/models/category.js",
+			"common/models/guide.js",
+			"common/models/user.js",
+
+			"common/message.js",
+			"common/storage.js",
+			"common/rules_engine.js",
+			"content_script/worker/js/http.js",
+			"content_script/dom_selector/player.js",
+			"content_script/dom_selector/creator.js",
+			"content_script/dom_selector/dom_finder.js",
+			"content_script/dom_selector/dom_finder_v1.js",
+			"content_script/dom_selector/dom_finder_v2.js",
+			"content_script/dom_selector/highlighter.js",
+			"content_script/dom_selector/main.js",
+			"content_script/dom_selector/selector.js",
+			"content_script/dom_selector/testme.js"
+		],
+		"all_frames": true,
+		"match_about_blank": true
+	}, {
+		"matches": ["*://*/*"],
+		"css": ["content_script/worker/css/style.css",
+			"common/lib/fonts/fonts-googleapis.css"
+		],
+		"js": [
+			"common/detect_browser.js",
+			"common/lib/jquery/jquery.min.js",
+			"common/lib/jquery/jquery.visible.min.js",
+			"common/lib/md5.js",
+			"common/lib/crypto-js.min.js",
+			"common/lib/hmac-sha256.min.js",
+			"common/lib/enc-base64.min.js",
+			"config.js",
+			"common/gsearch.js",
+			"common/util.contentscript.js",
+			"common/util.allframes.js",
+			"common/util.tracker.js",
+			"common/util.global.js",
+			"common/logger.js",
+
+			"common/models/api.js",
+			"common/models/organization.js",
+			"common/models/step.js",
+			"common/models/application.js",
+			"common/models/category.js",
+			"common/models/guide.js",
+			"common/models/user.js",
+
+			"common/message.js",
+			"common/storage.js",
+			"common/tracker_v1.js",
+			"common/insights_tracking.js",
+			"common/string_constants/player/_english.js",
+			"common/string_constants/string_constants.js",
+			"common/string_constants/player/hindi.js",
+			"common/string_constants/player/french.js",
+			"common/string_constants/player/chinese.js",
+			"common/string_constants/player/dutch.js",
+			"common/string_constants/player/german.js",
+			"common/string_constants/player/italian.js",
+			"common/string_constants/player/japanese.js",
+			"common/string_constants/player/korean.js",
+			"common/string_constants/player/polski.js",
+			"common/string_constants/player/portuguese.js",
+			"common/string_constants/player/russian.js",
+			"common/string_constants/player/spanish.js",
+			"common/string_constants/player/turkish.js",
+			"common/features.js",
+			"common/rules_engine.js",
+
+			"content_script/worker/js/test_auto.js",
+			"content_script/worker/js/screen_overlay.js",
+			"content_script/worker/js/player.js",
+			"content_script/worker/js/creator.js",
+			"content_script/worker/js/test_me.js",
+
+			"content_script/worker/js/http.js",
+			"content_script/worker/js/http.web.js",
+			"content_script/worker/js/http.web.player.js",
+
+			"content_script/worker/js/main.js",
+
+			"content_script/worker/js/popup_align.js",
+			"content_script/worker/js/preview_step_popup.js",
+			"content_script/worker/js/tour_player.js",
+			"content_script/worker/js/step.js",
+			"content_script/worker/js/user_guide.js",
+			"content_script/worker/js/step_panel.js",
+			"content_script/worker/js/survey_guide.js",
+			"content_script/worker/js/step_tooltip.js",
+			"content_script/worker/js/vlab.js"
+		]
+	}],
+	"background": {
+		"scripts": [
+			"common/lib/md5.js",
+			"common/detect_browser.js",
+			"config.js",
+			"common/lib/RecordRTC.min.js",
+			"common/lib/jquery/jquery.min.js",
+			"common/util.contentscript.js",
+			"common/util.allframes.js",
+			"common/util.tracker.js",
+			"common/util.global.js",
+			"common/features.js",
+			"common/logger.js",
+			"common/storage.js",
+			"common/tracker_v1.js",
+			"common/insights_tracking.js",
+			"common/models/api.js",
+			"common/models/organization.js",
+			"common/models/step.js",
+			"common/models/application.js",
+			"common/models/category.js",
+			"common/models/guide.js",
+			"common/models/user.js",
+
+			"content_script/worker/js/creator.js",
+			"content_script/worker/js/http.js",
+			"content_script/worker/js/http.web.js",
+			"content_script/worker/js/http.web.player.js",
+			"common/edcast_utilities.js",
+			"background.js",
+			"background_p.js"
+		]
+	},
+	"icons": {
+		"16": "common/img/gicon16.png",
+		"48": "common/img/gicon48.png",
+		"128": "common/img/gicon128.png"
+	},
+	"permissions": [
+		"<all_urls>", "storage"
+	],
+	"optional_permissions": [
+		"desktopCapture"
+	],
+	"browser_action": {
+		"default_icon": {
+			"40": "common/img/qu_icon.png"
+		},
+		"default_popup": "/browser_action/popup.html",
+		"browser_style": true
+	},
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"web_accessible_resources": [
+		"common/lib/elevio/elevio.html",
+		"content_script/**/*.html",
+		"public/index.html",
+		"src/**/*.html",
+		"src/**/*.js",
+		"common/img/*",
+		"common/icons/*"
+	],
+	"content_security_policy": "script-src 'self'; object-src 'self'"
+}

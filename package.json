@@ -16,7 +16,8 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
-    " -loader": "^5.0.2",
+    "copy-webpack-plugin": "^8.1.0",
+    "css-loader": "^5.2.0",
     "html-webpack-plugin": "^5.2.0",
     "mini-css-extract-plugin": "^1.3.8",
     "postcss": "^8.2.6",
@@ -32,5 +33,22 @@
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
-  }
+  },
+  "name": "webpack-project",
+  "description": "'Edcast Guideme'",
+  "version": "1.0.0",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhayedcast/webpack-config.git"
+  },
+  "author": "'edcast'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhayedcast/webpack-config/issues"
+  },
+  "homepage": "https://github.com/abhayedcast/webpack-config#readme",
+  "keywords": [
+    "'walkthough'"
+  ]
 }
