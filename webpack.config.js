@@ -18,6 +18,7 @@ const plugins = [
     new CopyWebpackPlugin({
         patterns: [
             { from: "./src/extension-file", to: path.resolve(__dirname, "dist") },
+            { from: "./options", to: path.resolve(__dirname, "dist/options") },
         ]
     })
 ]
